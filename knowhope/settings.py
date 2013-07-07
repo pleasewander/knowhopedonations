@@ -17,7 +17,7 @@ DATABASES = {
         # The following settings are not used with sqlite3:
         'USER': 'b19438af1bf230',
         'PASSWORD': 'b3b23d76',
-        'HOST': 'us-cdbr-east-03.cleardb.com',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+        'HOST': 'us-cdbr-east-04.cleardb.com',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
         'PORT': '3306',                      # Set to empty string for default.
     }
 }
