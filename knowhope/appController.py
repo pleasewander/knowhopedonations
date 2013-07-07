@@ -8,7 +8,7 @@ def mainpage(request):
     template = {
         'totalPercentage' : totalPercentage,
     }
-    return render_to_response('home.html', template)
+    return render(request, 'home.html', template)
 
 def donationsuccess(request):
     donatee= request.POST.get('first_name')

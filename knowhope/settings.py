@@ -105,14 +105,6 @@ MIDDLEWARE_CLASSES = (
 )
 
 
-#storages for aws
-AWS_STORAGE_BUCKET_NAME = 'knowhopedonations'
-STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-S3_URL = 'http://%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
-STATIC_URL = S3_URL
-AWS_ACCESS_KEY_ID = 'AKIAI34SX47LXOLQCOGA'
-AWS_SECRET_ACCESS_KEY = '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'
-
 ROOT_URLCONF = 'knowhope.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
@@ -164,3 +156,11 @@ LOGGING = {
         },
     }
 }
+
+#storages for aws
+AWS_STORAGE_BUCKET_NAME = 'knowhopedonations'
+STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+S3_URL = 'http://%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
+STATIC_URL = S3_URL
+AWS_ACCESS_KEY_ID = 'AKIAI34SX47LXOLQCOGA'
+AWS_SECRET_ACCESS_KEY = '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'
