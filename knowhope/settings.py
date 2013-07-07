@@ -13,12 +13,12 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '',                      # Or path to database file if using sqlite3.
+        'NAME': 'heroku_601e83754ea1b6c',                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-        'PORT': '',                      # Set to empty string for default.
+        'USER': 'b19438af1bf230',
+        'PASSWORD': 'b3b23d76',
+        'HOST': 'us-cdbr-east-03.cleardb.com',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+        'PORT': '3306',                      # Set to empty string for default.
     }
 }
 
@@ -104,6 +104,15 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
+
+#storages for aws
+AWS_STORAGE_BUCKET_NAME = 'knowhopedonations'
+STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+S3_URL = 'http://%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
+STATIC_URL = S3_URL
+AWS_ACCESS_KEY_ID = 'AKIAI34SX47LXOLQCOGA'
+AWS_SECRET_ACCESS_KEY = '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'
+
 ROOT_URLCONF = 'knowhope.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
@@ -153,5 +162,3 @@ LOGGING = {
         },
     }
 }
-
-from localsettings import *
