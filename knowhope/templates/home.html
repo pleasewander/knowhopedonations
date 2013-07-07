@@ -1,0 +1,50 @@
+{% include "include/wrapper-top.html" %}
+<div class="row">
+    <div class="span12">
+        <div class="page-header">
+            <h1>Welcome to Know Hope <small>the donation project</small></h1>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class= "span4 offset4">
+        <img src="{{ STATIC_URL }}/images/logo.png">
+    </div>
+</div>
+
+<div class="row">
+    <div class="span7 offset2">
+        <div class="progress progress-striped active">
+            <div class="bar" style="width: 10%;"></div>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="span8 offset2">
+        <h3> We have made it this far, will you get us to the<em> end?</em></h3>
+    </div>
+</div>
+
+<div class="row">
+    <div class="span6 offset5">
+        <form class="form-horizontal">
+            <label class="control-label" for="inputEmail">Name</label>
+            <div class="controls">
+              <input type="text" id="donateName" placeholder="Name">
+            </div>
+            <div class="controls">
+              <input type="text" id="donateAmount" placeholder="Amount">
+            </div>
+        </form>
+        <script src="{{ STATIC_URL }}js/paypal.js?merchant=knowhopedonationsseller@gmail.com"
+        data-button="donate"
+        data-callback="http://knowhopedonations.com/success"
+        data-env="sandbox"
+        ></script>
+    </div>
+</div>
+
+{% include "include/wrapper-bottom.html"%}
