@@ -128,6 +128,12 @@ INSTALLED_APPS = (
     'knowhope',
     'knowhope.model',
 )
+# registering models for admin
+from django.contrib import admin
+from knowhope.model.models import Donation
+
+admin.site.register(Donation)
+
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
@@ -165,3 +171,4 @@ S3_URL = 'http://%s.s3.amazonaws.com/' % AWS_STORAGE_BUCKET_NAME
 STATIC_URL = S3_URL
 AWS_ACCESS_KEY_ID = 'AKIAI34SX47LXOLQCOGA'
 AWS_SECRET_ACCESS_KEY = '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'
+
