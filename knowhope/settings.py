@@ -126,6 +126,7 @@ INSTALLED_APPS = (
      'django.contrib.admindocs',
     'storages',
     'knowhope',
+    'knowhope.model',
 )
 
 # A sample logging configuration. The only tangible logging

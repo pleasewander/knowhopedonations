@@ -1,7 +1,7 @@
-from knowhope.models import donation
+from knowhope.model.models import Donation
 
 def getDonationPercentage():
-    donations = donation.objects.all()
+    donations = Donation.objects.all()
     total = 0
     percentage = 0
 
