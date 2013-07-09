@@ -9,6 +9,6 @@ def getDonationPercentage():
         total += donatee.amount
 
     percentage = total / 7000
-    percentage = total * 100
+    percentage = percentage * 100
 
     return percentage
