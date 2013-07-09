@@ -13,6 +13,8 @@ def mainpage(request):
 def donationsuccess(request):
     donatee= request.POST.get('first_name')
     donationammount = request.POST.get('mc_gross1')
+    if donationammount == 0:
+        donationammount = request.POST.get('mc_gross')
 
     newdonation = Donation(name = donatee, amount = donationammount)
     newdonation.save()
