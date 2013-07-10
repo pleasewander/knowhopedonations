@@ -11,6 +11,4 @@ def getDonationPercentage():
     percentage = total / 7000
     percentage = percentage * 100
 
-
-
     return percentage

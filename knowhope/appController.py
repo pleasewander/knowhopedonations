@@ -10,11 +10,17 @@ def mainpage(request):
     }
     return render(request, 'home.html', template)
 
+def donationoptions(request):
+    return render(request, 'donations.html')
+
 def donationsuccess(request):
     donatee= request.POST.get('first_name')
     donationammount = request.POST.get('mc_gross1')
-    if donationammount == 0:
+    if donationammount == 0 or donationammount == None:
         donationammount = request.POST.get('mc_gross')
+
+    if donatee == None:
+        donatee = ' '
 
     newdonation = Donation(name = donatee, amount = donationammount)
     newdonation.save()
@@ -23,5 +29,6 @@ def donationsuccess(request):
 
 urlpatterns = patterns('knowhope.appController',
             url(r'^$', mainpage),
+            url(r'^donations$', donationoptions),
             url(r'^paypal$', donationsuccess),
 )

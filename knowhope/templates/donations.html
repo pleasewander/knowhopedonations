@@ -1,0 +1,32 @@
+{% include "include/wrapper-top.html" %}
+<div class="row">
+    <div class="span12 text-center">
+        <h1>Donation Options</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="span3">
+        <h3>Paypal Donation</h3>
+        <p> You can pay using the button below. Please
+        <strong>add 2.9%</strong> of your donation to offset the fees from paypal.</p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="SZW9UPPB68KUE">
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+        </form>
+    </div>
+    <div class="span3 offset1">
+        <h3>Paypal Gift</h3>
+        <p>You can also gift it to us and avoid all the fees
+        associated with paypal. Please login to your paypal account and
+        gift it to  <strong>knowhopedonations@gmail.com</strong></p>
+    </div>
+    <div class="span3 offset1">
+        <h3>In Person</h3>
+        <p>You can also give it to us in person and I will update the total on the site.
+        just send an email to knowhopedonations@gmail.com or talk to Risako or Ryan</p>
+    </div>
+</div>
+
+{% include "include/wrapper-bottom.html" %}
