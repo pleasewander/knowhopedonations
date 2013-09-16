@@ -27,8 +27,21 @@ def donationsuccess(request):
 
     return redirect('/')
 
+def donatees(request):
+    donations = Donation.objects.all()
+    donatee = []
+    for donation in donations:
+        donatee.append(donation.name);
+
+    template = {
+        'donatees' , donatee,
+    }
+
+    return render(request, 'donatees.html', template)
+
 urlpatterns = patterns('knowhope.appController',
             url(r'^$', mainpage),
             url(r'^donations$', donationoptions),
             url(r'^paypal$', donationsuccess),
+            url(r'^donatees$', donatees),
 )
