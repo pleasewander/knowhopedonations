@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, url
 from django.shortcuts import render,render_to_response, redirect
-from knowhope.donationsdao import getDonationPercentage
+from knowhope.donationsdao import getDonationPercentage, getDonateeList
 from knowhope.model.models import Donation
 
 def mainpage(request):
@@ -29,10 +29,10 @@ def donationsuccess(request):
 
 def donatees(request):
     donations = Donation.objects.all()
-
+    donatees = getDonateeList()
 
     template = {
-        'donatees' , donations,
+        'donatees' : donatees,
     }
 
     return render(request, 'donatees.html', template)

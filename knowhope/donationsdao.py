@@ -12,3 +12,12 @@ def getDonationPercentage():
     percentage = percentage * 100
 
     return percentage
+
+def getDonateeList():
+    donations = Donation.objects.all().order_by('name')
+    donatees = []
+
+    for donatee in donations:
+        donatees.append(donatee.name)
+
+    return donatees
