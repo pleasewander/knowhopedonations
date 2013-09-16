@@ -29,12 +29,10 @@ def donationsuccess(request):
 
 def donatees(request):
     donations = Donation.objects.all()
-    donatee = []
-    for donation in donations:
-        donatee.append(donation.name)
+
 
     template = {
-        'donatees' , donatee,
+        'donatees' , donations,
     }
 
     return render(request, 'donatees.html', template)
